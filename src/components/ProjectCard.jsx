@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 export default function ProjectCard({
   projectName,
@@ -8,7 +9,10 @@ export default function ProjectCard({
   projectLink,
 }) {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md mb-8">
+    <motion.div
+      className="bg-white rounded-lg p-6 shadow-md mb-8"
+      whileHover={{ scale: 1.025 }}
+    >
       <h1 className="text-2xl font-bold mb-2">{projectName}</h1>
       <p className="text-gray-600">{projectType}</p>
       <p className="text-gray-800 my-4">{projectDescription}</p>
@@ -19,7 +23,7 @@ export default function ProjectCard({
       <a href={projectLink} className="text-blue-500 hover:underline">
         The project can be viewed here
       </a>
-    </div>
+    </motion.div>
   );
 }
 

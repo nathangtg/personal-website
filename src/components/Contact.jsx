@@ -1,10 +1,10 @@
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Replace these placeholders with your actual EmailJS service ID, template ID, and user ID
     const serviceId = "service_3h6alg3";
     const templateId = "template_ktqgg51";
     const userId = "ykpNB2LNWaszrUPyz";
@@ -13,17 +13,20 @@ export default function Contact() {
       .sendForm(serviceId, templateId, e.target, userId)
       .then((result) => {
         console.log("Email sent successfully:", result.text);
-        // Redirect to the homepage after successful submission
         window.location.href = "/";
       })
       .catch((error) => {
         console.error("Error occurred while sending email:", error.text);
-        // Handle error here (e.g., display error message to the user)
       });
   };
 
   return (
-    <div className="w-[100%]">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} // Initial animation state
+      animate={{ opacity: 1, y: 0 }} // Animation when component enters the viewport
+      transition={{ duration: 0.5 }} // Animation duration
+      className="w-[100%]"
+    >
       <form
         className="border border-blue-300 rounded-xl backdrop-blur-md"
         onSubmit={handleSubmit}
@@ -83,14 +86,16 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex items-center p-6 pt-0">
-          <button
+          <motion.button
             type="submit"
-            className=" bg-blue-700 text-white active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4 w-full"
+            whileHover={{ scale: 1.05 }} // Scale animation on hover
+            whileTap={{ scale: 0.95 }} // Scale animation on tap
+            className="bg-blue-700 text-white active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4 w-full"
           >
             Submit
-          </button>
+          </motion.button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 }

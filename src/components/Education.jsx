@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Education() {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} // Initial animation state
+      animate={{ opacity: 1, y: 0 }} // Animation when component enters the viewport
+      transition={{ duration: 0.5 }} // Animation duration
+      className=""
+    >
       <div
         className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold 
         transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent
@@ -29,7 +36,12 @@ export default function Education() {
           {" "}
           January 2023 - January 2025
         </div>
-        <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point ">
+        <motion.div // Apply motion animation to this div
+          initial={{ opacity: 0, x: 50 }} // Initial animation state
+          animate={{ opacity: 1, x: 0 }} // Animation when component enters the viewport
+          transition={{ duration: 0.5, delay: 0.2 }} // Animation duration and delay
+          className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point "
+        >
           <div className="text-2xl font-rubik max-sm:text-xl">
             Diploma in Information Technology, <br /> Sunway College
           </div>
@@ -48,8 +60,8 @@ export default function Education() {
             app development, data science and analytics, cybersecurity, or
             software engineering methodologies.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Technical() {
   return (
-    <div className="w-[100%]">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-[100%]"
+    >
       <div
         className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold 
         transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent
@@ -29,46 +36,66 @@ export default function Technical() {
         <div className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base">
           Languages
         </div>
-        <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point"
+        >
           <div className="text-2xl font-rubik max-sm:text-xl">
             Python, Java, JavaScript, HTML, CSS, PHP, Dart
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full h-fit flex mt-12">
         <div className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base">
           Frameworks
         </div>
-        <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point"
+        >
           <div className="text-2xl font-rubik max-sm:text-xl">
             React, Node.js, Laravel, Bootstrap, Tailwind CSS, Flutter, Vue JS,
             Angular
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full h-fit flex mt-12">
         <div className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base">
           Machine Learning
         </div>
-        <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point"
+        >
           <div className="text-2xl font-rubik max-sm:text-xl">
             TensorFlow, Scikit-learn, NumPy, Panda, Gemini API, GPT API
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full h-fit flex mt-12">
         <div className="w-1/4 font-rubik flex items-center justify-evenly text-lg max-sm:text-base">
           Tools
         </div>
-        <div className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point"
+        >
           <div className="text-2xl font-rubik max-sm:text-xl">
             Git, GitHub, Visual Studio Code, Figma, IntelliJ
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
