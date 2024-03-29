@@ -33,15 +33,15 @@ export default function Introduction() {
       </motion.h1>
 
       <motion.div
-        className="font-poppins text-base sm:text-2xl [text-wrap:balance] text-gray-700 text-center"
+        className="font-poppins text-base sm:text-2xl [text-wrap:balance] text-gray-700 text-center ml-4"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         {" "}
-        I am an Information Technology student <br />
+        an Information Technology student <br />
         and a
-        <span className="justify-center inline-flex ml-2 flex-col h-[calc(theme(fontSize.lg)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] overflow-hidden w-36">
+        <span className="justify-center inline-flex ml-4 flex-col h-[calc(theme(fontSize.lg)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] overflow-hidden w-36">
           <ul className="block text-left font-rubik text-lg sm:text-3xl leading-tight [&amp;_li]:block animate-slide-top">
             <li className="text-[#2f7df4]">{roles[currentIndex]}</li>
           </ul>
