@@ -1,4 +1,4 @@
-# [Your Name]'s Personal Website
+# Nathan G's Personal Website
 
 Welcome to my personal website! This is where I share my thoughts, projects, and experiences with the world. Feel free to explore and get to know me better.
 
