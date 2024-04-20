@@ -41,7 +41,3 @@ I welcome contributions and feedback! If you find any issues or have suggestions
 - Email: nathan.n@imail.sunway.edu.my
 - LinkedIn: https://www.linkedin.com/in/nathan-apg/
 - Website: https://nathangtg.vercel.app/
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
