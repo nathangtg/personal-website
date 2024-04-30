@@ -9,8 +9,23 @@ export default function Contact() {
     const templateId = "template_ktqgg51";
     const userId = "ykpNB2LNWaszrUPyz";
 
+    // emailjs.send(serviceId,templateId,{
+    //   to_name: e.target.name.value,
+    //   from_name: e.target.SenderEmail.value,
+    //   message: e.target.message.value,
+    //   });
+
     emailjs
-      .sendForm(serviceId, templateId, e.target, userId)
+      .send(
+        serviceId,
+        templateId,
+        {
+          to_name: e.target.name.value,
+          from_name: e.target.SenderEmail.value,
+          message: e.target.message.value,
+        },
+        userId
+      )
       .then((result) => {
         console.log("Email sent successfully:", result.text);
         window.location.href = "/";
