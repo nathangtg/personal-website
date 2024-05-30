@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import CV_PDF from "../assets/Nathan G - CV - 21 May 2024.pdf";
+import CV_PDF from "../assets/Nathan G - CV - May 30th 2024.pdf";
 
 export default function Introduction() {
   const [currentIndex, setCurrentIndex] = useState(0);
